@@ -1,0 +1,8 @@
+# Secrets and Credentials
+.env
+*.env
+.streamlit/secrets.toml
+secrets.toml
+credentials.json
+*.key
+*.pem
