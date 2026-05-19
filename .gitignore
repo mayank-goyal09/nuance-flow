@@ -6,3 +6,18 @@ secrets.toml
 credentials.json
 *.key
 *.pem
+
+# Large Model Weights and Checkpoints
+final_emotion_model/
+final_emotion_model_v2/
+emotion_model_results/
+
+# Python caches, virtual environments and logs
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+logs/
+.venv/
+venv/

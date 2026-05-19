@@ -1,0 +1,56 @@
+text,label_id,emotion
+The battery is overheating and I'm worried it might catch fire.,4,fear
+The driver was rude and threw the package on the ground.,2,anger
+Urgent! The server is down and we are losing customers.,4,fear
+I'm thrilled with how easy the update was to set up!,0,joy
+I'm afraid to use this on my main computer due to the virus warning.,4,fear
+"I'm confused, the manual says one thing but the app does another.",5,surprise
+Disappointed that the feature I paid for isn't included.,3,sadness
+I'm surprised by how many features are included in the free plan.,5,surprise
+This feels unsafe. The verification process is flawed.,4,fear
+Your latest update ruined the workflow. Fix it now!,2,anger
+I'm afraid to use this on my main computer due to the virus warning.,4,fear
+The item arrived damaged and now it's out of stock.,3,sadness
+The quality of the materials is excellent. Very satisfied.,0,joy
+The item arrived damaged and now it's out of stock.,3,sadness
+Worst customer service experience ever. No one answers the phone.,2,anger
+The item arrived damaged and now it's out of stock.,3,sadness
+"Actually, this is much better than I thought it would be.",5,surprise
+I can't imagine running my business without this tool anymore.,1,love
+The tracking says delivered but I can't find it. I'm worried it was stolen.,4,fear
+Finally found a solution that actually works as advertised. Great job!,0,joy
+Highly impressed with the speed of delivery. Arrived early!,0,joy
+"The new update is fantastic, everything runs so smoothly now.",0,joy
+"It's a shame, I really wanted to like this product.",3,sadness
+The interface broke immediately after the warranty expired.,2,anger
+Sad to see the quality go down over the years.,3,sadness
+Your latest update ruined the workflow. Fix it now!,2,anger
+I can't imagine running my business without this tool anymore.,1,love
+"Sorry to say, but I'll be cancelling my subscription.",3,sadness
+Please help! My account has been hacked.,4,fear
+I'm scared I lost all my files after the sync failed.,4,fear
+This feels unsafe. The verification process is flawed.,4,fear
+I can't imagine running my business without this tool anymore.,1,love
+I'm scared I lost all my files after the sync failed.,4,fear
+Your latest update ruined the workflow. Fix it now!,2,anger
+"Wow, I didn't expect it to arrive so quickly!",5,surprise
+Customer support was helpful and resolved my issue in minutes.,0,joy
+This is hands down the best interface I've ever owned.,1,love
+"Wow, I didn't expect it to arrive so quickly!",5,surprise
+The tracking says delivered but I can't find it. I'm worried it was stolen.,4,fear
+"Wait, checking out was instant? That was fast.",5,surprise
+I regret buying this. Should have done more research.,3,sadness
+It's just not what it used to be. Very disappointing.,3,sadness
+I'm scared I lost all my files after the sync failed.,4,fear
+Your latest update ruined the workflow. Fix it now!,2,anger
+I'm obsessed with the design. It's beautiful!,1,love
+I'm thrilled with how easy the system was to set up!,0,joy
+The quality of the materials is excellent. Very satisfied.,0,joy
+The box was huge! I wasn't expecting that.,5,surprise
+The box was huge! I wasn't expecting that.,5,surprise
+It's surprisingly heavy for its size.,5,surprise
+"The product is okay, but I'm worried about the long-term support.",4,fear
+"I hate the new logo, but the service is still great.",2,anger
+"Oh my god, the new feature is finally here!",5,surprise
+We are shutting down our account due to lack of usage.,3,sadness
+URGENT: The payment gateway is throwing 500 errors.,4,fear
