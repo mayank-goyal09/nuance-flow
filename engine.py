@@ -3,13 +3,19 @@ from transformers import pipeline
 
 class EmotionEngine:
     def __init__(self):
-        # We use DistilBERT: Smaller, Faster, Cheaper!
-        # This model is already fine-tuned on GoEmotions
-        # We use DistilBERT local model after training
-        self.model_name = "./final_emotion_model_v2"
-        # Fallback to base if training isn't done yet (though this won't work perfectly without training)
-        # self.model_name = "distilbert-base-uncased" 
-        print(f"⚙️ Loading the Brain: {self.model_name}...")
+        # We use DistilBERT fine-tuned model
+        # 1. Try local path first
+        self.local_model_path = "./final_emotion_model_v2"
+        # 2. Hugging Face repository ID for remote deployment
+        self.hf_model_id = "mayankg09/emotion-analytics-distilbert"
+        
+        import os
+        if os.path.isdir(self.local_model_path):
+            self.model_name = self.local_model_path
+            print(f"⚙️ Loading local model from: {self.model_name}...")
+        else:
+            self.model_name = self.hf_model_id
+            print(f"⚙️ Local model not found. Loading from Hugging Face Hub: {self.model_name}...")
         
         # Load the pipeline
         try:
@@ -18,8 +24,9 @@ class EmotionEngine:
                 model=self.model_name, 
                 top_k=None # Returns all emotions with scores
             )
+            print(f"✅ Successfully loaded model: {self.model_name}")
         except Exception as e:
-            print(f"⚠️ specific model not found locally. Please run train.py first! Error: {e}")
+            print(f"⚠️ Failed to load model '{self.model_name}'. Error: {e}")
             self.classifier = None
         
         # Mapping 6 Business Emotions to Action Buckets
