@@ -192,6 +192,20 @@ Developing and deploying a deep learning model locally presented several interes
 * **The Bug**: Sarcastic, mixed, or poorly structured comments (e.g., *"I hate this app, but I love the support team"*) returned low prediction confidence values, leading to incorrect routing.
 * **The Fix**: Embedded a custom **Uncertainty Filter Gate** directly into prediction modules. Any top-tier prediction scoring a confidence coefficient of `< 0.60` is flagged as **"Ambiguous"**, mapping automatically to **"Human Review Required 🔍"** to prevent automated response failures.
 
+### 5. Streamlit Deployment: Missing Local Weights (Hugging Face Hub Migration) 🚀
+* **The Bug**: To keep the GitHub repository lightweight and prevent pushing 260MB model binaries, `.gitignore` excludes `final_emotion_model_v2/`. Consequently, Streamlit Cloud deployments crashed on startup because they couldn't find the model weights locally.
+* **The Fix**: Created a secure [upload_to_hf.py](file:///c:/my_local_data%28one%20drive%29/Attachments/Ambition%20course/my_all_projects/project%2062%20Emotion-Analytics/upload_to_hf.py) script to automatically login and push the local fine-tuned model to the Hugging Face Model Hub under `mayankg09/emotion-analytics-distilbert`. Patched [engine.py](file:///c:/my_local_data%28one%20drive%29/Attachments/Ambition%20course/my_all_projects/project%2062%20Emotion-Analytics/engine.py) to implement a **hybrid loader** that searches for the local model folder first, dynamically falling back to download from Hugging Face Hub when deployed online.
+
+### 6. Hidden Floating Emoji Background (CSS Stack Layering) 🎨
+* **The Bug**: Standard Streamlit structural container viewports (`stAppViewContainer` and `stMainViewContainer`) render with default solid background layers, overlapping and completely hiding the fixed custom `.emoji-bg` layout (at `z-index: -1`).
+* **The Fix**: Refactored the dashboard styling inside [app.py](file:///c:/my_local_data%28one%20drive%29/Attachments/Ambition%20course/my_all_projects/project%2062%20Emotion-Analytics/app.py) to bind the radial gradient to the base `html` tag, making all internal Streamlit wrappers completely transparent (`background: transparent !important`). This exposes the floating emojis behind all content cards without affecting the page's interactivity.
+
+### 7. NLP Case Study: Semantic Ambiguity & Machine Bias (Curiosity vs. Surprise) 🔬
+* **The Inquiry**: To test the boundaries of our pipeline, we inputted a complex, grammatically structured freelance query:
+  > *"so, as you know, I have texted with you so many things about freelancing earlier. On the basis of my history, can you please find out without the drawbacks?"*
+* **The Model Output**: It classified the sentence as **`surprise`** with **`67.03%` confidence** (routing to the `MONITOR` action bucket).
+* **The MLOps Insight**: While a human reads this as a polite request/inquiry based on *Curiosity*, the transformer model associates structural components (e.g. the conversational starting tag *"so, as you know..."*, direct negation *"without"*, and final question mark) with statistical characteristics of "surprise" and "confusion" present in GoEmotions. This case study demonstrates why the **60% Uncertainty Gate** and non-disruptive priority mapping (like **`MONITOR`**) are critical for real-world deployments to prevent automated customer workflow failures.
+
 ---
 
 ## 📂 **PROJECT STRUCTURE**
