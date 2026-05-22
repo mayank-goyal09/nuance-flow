@@ -12,8 +12,12 @@ st.markdown("""
     @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap');
 
     /* Background and global elements */
-    .stApp {
+    html {
         background: radial-gradient(circle at 50% 50%, #151624 0%, #0a0b10 100%) !important;
+        background-attachment: fixed !important;
+    }
+    body, [data-testid="stAppViewContainer"], [data-testid="stMainViewContainer"], .stApp {
+        background: transparent !important;
         font-family: 'Outfit', sans-serif !important;
         color: #ffffff !important;
     }
