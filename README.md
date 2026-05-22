@@ -12,7 +12,7 @@
 
 <br/>
 
-[![🚀 Live Demo](https://img.shields.io/badge/🚀_LIVE_DEMO-Emotion_Pro_AI-ff4b4b?style=for-the-badge&labelColor=151624)](https://nuance-flow.streamlit.app/)
+[![🚀 Live Demo](https://img.shields.io/badge/🚀_LIVE_DEMO-Emotion_Pro_AI-ff4b4b?style=for-the-badge&labelColor=151624)](https://nuance-flow-app.streamlit.app/)
 [![GitHub Stars](https://img.shields.io/github/stars/mayank-goyal09/nuance-flow?style=for-the-badge&color=ffd700)](https://github.com/mayank-goyal09/nuance-flow/stargazers)
 [![GitHub Forks](https://img.shields.io/github/forks/mayank-goyal09/nuance-flow?style=for-the-badge&color=87ceeb)](https://github.com/mayank-goyal09/nuance-flow/network)
 
