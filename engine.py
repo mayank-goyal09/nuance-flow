@@ -12,10 +12,10 @@ class EmotionEngine:
         import os
         if os.path.isdir(self.local_model_path):
             self.model_name = self.local_model_path
-            print(f"⚙️ Loading local model from: {self.model_name}...")
+            print(f"[INFO] Loading local model from: {self.model_name}...")
         else:
             self.model_name = self.hf_model_id
-            print(f"⚙️ Local model not found. Loading from Hugging Face Hub: {self.model_name}...")
+            print(f"[INFO] Local model not found. Loading from Hugging Face Hub: {self.model_name}...")
         
         # Load the pipeline
         try:
@@ -24,9 +24,9 @@ class EmotionEngine:
                 model=self.model_name, 
                 top_k=None # Returns all emotions with scores
             )
-            print(f"✅ Successfully loaded model: {self.model_name}")
+            print(f"[SUCCESS] Successfully loaded model: {self.model_name}")
         except Exception as e:
-            print(f"⚠️ Failed to load model '{self.model_name}'. Error: {e}")
+            print(f"[WARNING] Failed to load model '{self.model_name}'. Error: {e}")
             self.classifier = None
         
         # Mapping 6 Business Emotions to Action Buckets
